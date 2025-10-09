@@ -8,19 +8,65 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+	<div class="cursor"></div>
+
 	<div class="main-wrapper">
+		<!-- Profile Section -->
 		<div class="profile-section horizontal-profile">
-			<img src="image3.png" alt="Profile" class="profile-photo">
-			<div class="profile-text">
-				<h1 class="gradient-title">Sup!... It’s me Ace</h1>
-				<h2 class="subtitle">Basically An <span class="highlight">IMPHNEN</span> Member</h2>
+			<img src="image3.png" alt="Profile" class="profile-photo large-profile-photo">
+			<div class="profile-right">
+				<div class="profile-text">
+					<h1 class="gradient-title glow-text">Sup!... It’s me Ace</h1>
+					<h2 class="subtitle">Basically An <a href="https://facebook.com" class="highlight facebook-link" target="_blank">IMPHNEN</a> Member</h2>
+				</div>
+				<div class="social-bar under-text">
+					<a href="#" class="social-link"><i class="fab fa-github"></i> Github</a>
+					<a href="#" class="social-link"><i class="fab fa-discord"></i> Discord</a>
+					<a href="#" class="social-link"><i class="fa-solid fa-film"></i> MyAnimeList</a>
+				</div>
 			</div>
 		</div>
-		<div class="social-bar">
-			<a href="#" class="social-link"><i class="fab fa-github"></i> Github</a>
-			<a href="#" class="social-link"><i class="fab fa-discord"></i> Discord</a>
-			<a href="#" class="social-link"><i class="fa-solid fa-film"></i> MyAnimeList</a>
+
+
+		<!-- Projects Section -->
+		<div class="recent-projects-section">
+			<div class="recent-projects-slider">
+				<div class="project-card"><img src="p2.jpeg" alt="R"><span>R</span></div>
+				<div class="project-card"><img src="p3.jpeg" alt="E"><span>E</span></div>
+				<div class="project-card"><img src="p4.jpeg" alt="Z"><span>Z</span></div>
+				<div class="project-card"><img src="p6.jpeg" alt="E"><span>E</span></div>
+			</div>
 		</div>
 	</div>
+
+	<script src="script.js"></script>
+
+		<!-- About Section -->
+		<section class="about-section fade-in">
+			<div class="about-overlay">
+				<div class="about-content">
+					<h2 class="about-title glow-text">About Me</h2>
+					<p class="about-text">
+						Hey there, I’m <span class="highlight">Ace</span> — a curious creator who loves to learn, build cool stuff, and vibe in the digital world 🌌.  
+						I enjoy exploring tech, design, and little things that make life glow brighter.
+					</p>
+
+					<div class="connect-area">
+						<h3 class="connect-title glow-text">Connect With Me</h3>
+						<a href="mailto:example@gmail.com" class="connect-btn glow-hover"><i class="fa-solid fa-envelope"></i> Send Email</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer Section -->
+		<footer>
+			<div class="footer-credit">
+				<p>© 2025 Ace — Designed with 💚 by <span class="highlight">Razor & Chika</span></p>
+			</div>
+			<a href="https://ko-fi.com/" target="_blank" class="kofi-float-btn">
+				☕ Buy me Ko-fi
+			</a>
+		</footer>
 </body>
 </html>
+
