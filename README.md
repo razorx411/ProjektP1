@@ -1,2 +1,1 @@
-# ProjektP1
-Portofolio1
+whoami? 
