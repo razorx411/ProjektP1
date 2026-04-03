@@ -1,81 +1,768 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ace Portfolio</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hafid Fathurrohman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #fafaf8;
+      --black: #111110;
+      --gray: #888884;
+      --light: #e8e8e4;
+      --accent: #111110;
+      --serif: 'EB Garamond', Georgia, serif;
+      --mono: 'DM Mono', 'Courier New', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--serif);
+      background: var(--white);
+      color: var(--black);
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--white); }
+    ::-webkit-scrollbar-thumb { background: var(--light); }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 4rem;
+      background: rgba(250, 250, 248, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--light);
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      color: var(--black);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.4rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--black); }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--black);
+      transition: all 0.3s;
+    }
+
+    /* ── SECTIONS SHARED ── */
+    section {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 2.8rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--light);
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 8rem;
+      max-width: 760px;
+      margin: 0 auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-name {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 4.4rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-sub {
+      font-size: 1.08rem;
+      color: var(--gray);
+      max-width: 480px;
+      line-height: 1.65;
+      margin-bottom: 2.8rem;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 1.6rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.7rem 1.5rem;
+      border: 1px solid var(--black);
+      color: var(--black);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+
+    .btn:hover { background: var(--black); color: var(--white); }
+    .btn-fill { background: var(--black); color: var(--white); }
+    .btn-fill:hover { background: transparent; color: var(--black); }
+
+    .hero-scroll {
+      margin-top: auto;
+      padding-top: 4rem;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      border: none;
+      border-top: 1px solid var(--light);
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .about-text p {
+      color: #444442;
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    .about-meta {
+      font-family: var(--mono);
+    }
+
+    .meta-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--light);
+    }
+
+    .meta-item:first-child { border-top: 1px solid var(--light); }
+
+    .meta-label {
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 0.3rem;
+    }
+
+    .meta-value {
+      font-size: 0.82rem;
+      color: var(--black);
+      font-weight: 400;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+
+    .skill-block {
+      padding: 1.8rem 0;
+      border-bottom: 1px solid var(--light);
+    }
+
+    .skill-block:nth-child(odd) { padding-right: 2rem; border-right: 1px solid var(--light); }
+    .skill-block:nth-child(even) { padding-left: 2rem; }
+
+    .skill-title {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gray);
+      border: 1px solid var(--light);
+      padding: 0.25rem 0.6rem;
+    }
+
+    /* ── WORK ── */
+    .project {
+      padding: 2.4rem 0;
+      border-bottom: 1px solid var(--light);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-start: start;
+    }
+
+    .project:first-of-type { border-top: 1px solid var(--light); }
+
+    .project-number {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--gray);
+      margin-bottom: 0.6rem;
+    }
+
+    .project-title {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      color: #555552;
+      font-size: 0.95rem;
+      max-width: 500px;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .project-status {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #7db87d;
+      margin-right: 6px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .project-action {
+      align-self: start;
+      margin-top: 0.4rem;
+    }
+
+    /* ── BLOG ── */
+    .blog-list { list-style: none; }
+
+    .blog-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.1rem 0;
+      border-bottom: 1px solid var(--light);
+      text-decoration: none;
+      color: var(--black);
+      transition: padding-left 0.2s;
+    }
+
+    .blog-item:first-child { border-top: 1px solid var(--light); }
+    .blog-item:hover { padding-left: 0.5rem; }
+
+    .blog-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 400;
+    }
+
+    .blog-meta {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      color: var(--gray);
+      white-space: nowrap;
+    }
+
+    .blog-note {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--gray);
+      text-align: center;
+      padding: 1.4rem 0 0;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── CONTACT ── */
+    .contact-intro {
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      margin-bottom: 2.4rem;
+      max-width: 520px;
+    }
+
+    .contact-intro em { font-style: italic; }
+
+    .contact-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .contact-socials {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--light);
+      padding-top: 2rem;
+    }
+
+    .social-link {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--gray);
+      transition: color 0.2s;
+    }
+
+    .social-link:hover { color: var(--black); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--light);
+      padding: 2rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-text {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: var(--gray);
+    }
+
+    /* ── FADE IN ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 680px) {
+      nav { padding: 1.2rem 1.6rem; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 57px; left: 0; right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--light);
+        padding: 1.6rem;
+        gap: 1.4rem;
+      }
+      .hamburger { display: flex; }
+
+      #hero { padding-top: 7rem; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 2.4rem; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .skill-block:nth-child(odd) { padding-right: 0; border-right: none; }
+      .skill-block:nth-child(even) { padding-left: 0; }
+
+      .project { grid-template-columns: 1fr; gap: 1rem; }
+      .blog-item { flex-direction: column; gap: 0.3rem; }
+      footer { flex-direction: column; gap: 0.6rem; text-align: center; padding: 1.6rem; }
+    }
+  </style>
 </head>
 <body>
-	<div class="cursor"></div>
 
-	<div class="main-wrapper">
-		<!-- Profile Section -->
-		<div class="profile-section horizontal-profile">
-			<img src="image3.png" alt="Profile" class="profile-photo large-profile-photo">
-			<div class="profile-right">
-				<div class="profile-text">
-					<h1 class="gradient-title glow-text">Sup!... It’s me Ace</h1>
-					<h2 class="subtitle">Basically An <a href="https://web.facebook.com/groups/programmerhandal" class="highlight facebook-link" target="_blank">IMPHNEN</a> Member.</h2>
-				</div>
-				<div class="social-bar under-text">
-					<a href="https://github.com/razorx411" class="social-link"><i class="fab fa-github"></i> Github</a>
-					<a href="https://discord.com/users/ezboy4884" class="social-link"><i class="fab fa-discord"></i> Discord</a>
-					<a href="#" class="social-link"><i class="fa-solid fa-film"></i> MyAnimeList</a>
-				</div>
-			</div>
-		</div>
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">Hafid F.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
+  <!-- HERO -->
+  <section id="hero">
+    <p class="hero-eyebrow">Available for internships & collaborations</p>
+    <h1 class="hero-name">Hafid<br/><em>Fathurrohman</em></h1>
+    <p class="hero-sub">
+      Information Systems student at UPN Veteran Jawa Timur —
+      building things across the stack. Web, games, infra, data. Still learning, always shipping.
+    </p>
+    <div class="hero-links">
+      <a href="#work" class="btn btn-fill">See my work</a>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+    <p class="hero-scroll">↓ scroll</p>
+  </section>
 
-		<!-- Projects Section -->
-		<div class="recent-projects-section">
-			<div class="recent-projects-slider">
-				<div class="project-card"><img src="miyabi1.jpeg" alt="R"><span>R</span></div>
-				<div class="project-card"><img src="mwahaha1.jpeg" alt="E"><span>E</span></div>
-				<div class="project-card"><img src="reze1.jpeg" alt="Z"><span>Z</span></div>
-				<div class="project-card"><img src="nagisa1.jpeg" alt="E"><span>E</span></div>
-			</div>
-		</div>
-	</div>
+  <hr class="divider" />
 
-	<script src="script.js"></script>
+  <!-- ABOUT -->
+  <section id="about">
+    <p class="section-label">About</p>
+    <div class="about-grid fade-in">
+      <div class="about-text">
+        <p>
+          I'm Hafid, an undergraduate Information Systems student based in East Java, Indonesia.
+          I got into tech because I wanted to understand how everything connects — from the database
+          to the browser, from a server config to a game loop.
+        </p>
+        <p>
+          I approach every domain as a student first. I don't believe in being locked into one
+          discipline, especially early on. The generalist mindset helps me connect dots that
+          specialists sometimes miss.
+        </p>
+        <p>
+          Currently building <strong>AksaraLoka</strong> and <strong>ChikaAI</strong> — two projects
+          that are teaching me more than any course has.
+        </p>
+      </div>
+      <div class="about-meta">
+        <div class="meta-item">
+          <div class="meta-label">Status</div>
+          <div class="meta-value">Undergraduate, active</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">University</div>
+          <div class="meta-value">UPN Veteran Jawa Timur</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Major</div>
+          <div class="meta-value">Information Systems</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Location</div>
+          <div class="meta-value">Surabaya, East Java</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Open to</div>
+          <div class="meta-value">Internships, Collabs</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- About Section -->
-		<section class="about-section fade-in">
-			<div class="about-overlay">
-				<div class="about-content">
-					<h2 class="about-title glow-text">About Me</h2>
-					<p class="about-text">
-						Hey there, I’m <span class="highlight">Ace</span> — a curious creator who loves to learn, build cool stuff, and vibe in the digital world 🌌.  
-						I enjoy exploring tech, design, and little things that make life glow brighter.
-					</p>
+  <hr class="divider" />
 
-					<div class="connect-area">
-						<h3 class="connect-title glow-text">Connect With Me</h3>
-						<a href="mailto:example@gmail.com" class="connect-btn glow-hover"><i class="fa-solid fa-envelope"></i> Send Email</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- Footer Section -->
-		<footer>
-			<div class="footer-credit">
-				<p>© 2025 Ace — Designed with 💚 by <span class="highlight">Razor & Chika</span></p>
-			</div>
-			<a href="https://ko-fi.com/" target="_blank" class="kofi-float-btn">
-				☕ Buy me Ko-fi
-			</a>
-		</footer>
+  <!-- SKILLS -->
+  <section id="skills">
+    <p class="section-label">Skills</p>
+    <div class="skills-grid fade-in">
+
+      <div class="skill-block">
+        <p class="skill-title">Web Development</p>
+        <div class="skill-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">PHP</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">REST APIs</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <p class="skill-title">Game Development</p>
+        <div class="skill-tags">
+          <span class="tag">Unity</span>
+          <span class="tag">C#</span>
+          <span class="tag">Game Design</span>
+          <span class="tag">2D / 3D</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <p class="skill-title">DevOps & Infra</p>
+        <div class="skill-tags">
+          <span class="tag">Linux</span>
+          <span class="tag">Git</span>
+          <span class="tag">Docker</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">Bash</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <p class="skill-title">Database Admin</p>
+        <div class="skill-tags">
+          <span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Query Opt.</span>
+          <span class="tag">Schema Design</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <p class="skill-title">Software Engineering</p>
+        <div class="skill-tags">
+          <span class="tag">OOP</span>
+          <span class="tag">Python</span>
+          <span class="tag">Data Structures</span>
+          <span class="tag">Algorithms</span>
+        </div>
+      </div>
+
+      <div class="skill-block">
+        <p class="skill-title">Currently Learning</p>
+        <div class="skill-tags">
+          <span class="tag">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">AI/ML Basics</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- WORK -->
+  <section id="work">
+    <p class="section-label">Work</p>
+
+    <div class="project fade-in">
+      <div>
+        <p class="project-number">01</p>
+        <h3 class="project-title">AksaraLoka</h3>
+        <p class="project-desc">
+          A platform dedicated to Indonesian local scripts and languages — making regional aksara
+          accessible, learnable, and preservable for the digital generation.
+        </p>
+        <p class="project-status">
+          <span class="status-dot"></span>Ongoing
+        </p>
+      </div>
+      <div class="project-action">
+        <a href="#contact" class="btn">Inquire →</a>
+      </div>
+    </div>
+
+    <div class="project fade-in">
+      <div>
+        <p class="project-number">02</p>
+        <h3 class="project-title">ChikaAI</h3>
+        <p class="project-desc">
+          An AI-powered assistant project — exploring conversational interfaces, prompt engineering,
+          and integrating language models into practical, user-facing applications.
+        </p>
+        <p class="project-status">
+          <span class="status-dot"></span>Ongoing
+        </p>
+      </div>
+      <div class="project-action">
+        <a href="#contact" class="btn">Inquire →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="divider" />
+
+  <!-- BLOG -->
+  <section id="blog">
+    <p class="section-label">Blog</p>
+    <ul class="blog-list fade-in">
+      <a class="blog-item" href="#">
+        <span class="blog-title">What I learned building AksaraLoka from scratch</span>
+        <span class="blog-meta">Coming soon</span>
+      </a>
+      <a class="blog-item" href="#">
+        <span class="blog-title">Why I study DevOps as a freshman — and why you should too</span>
+        <span class="blog-meta">Coming soon</span>
+      </a>
+      <a class="blog-item" href="#">
+        <span class="blog-title">Game dev taught me to think in systems</span>
+        <span class="blog-meta">Coming soon</span>
+      </a>
+      <a class="blog-item" href="#">
+        <span class="blog-title">Database design mistakes I made and what fixed them</span>
+        <span class="blog-meta">Coming soon</span>
+      </a>
+    </ul>
+    <p class="blog-note">Writing in progress — check back soon.</p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <p class="section-label">Contact</p>
+    <p class="contact-intro fade-in">
+      Got a project, idea, or just want to<br/><em>say hello?</em>
+    </p>
+    <div class="contact-row fade-in">
+      <a href="mailto:hafid@example.com" class="btn btn-fill">hafid@example.com</a>
+    </div>
+    <div class="contact-socials fade-in">
+      <a href="https://github.com/" target="_blank" class="social-link">GitHub ↗</a>
+      <a href="https://linkedin.com/" target="_blank" class="social-link">LinkedIn ↗</a>
+      <a href="https://twitter.com/" target="_blank" class="social-link">Twitter ↗</a>
+      <a href="https://instagram.com/" target="_blank" class="social-link">Instagram ↗</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-text">© 2025 Hafid Fathurrohman</span>
+    <span class="footer-text">Built with HTML, CSS & a lot of caffeine.</span>
+  </footer>
+
+  <script>
+    // Hamburger toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Active nav highlight
+    const sections = document.querySelectorAll('section[id]');
+    const navAs = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navAs.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--black)' : '';
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
