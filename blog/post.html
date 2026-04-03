@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Title — Hafid Fathurrohman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="blog.css"/>
+</head>
+<body>
+
+  <!-- ════ NAV ════ -->
+  <nav>
+    <a href="../index.html" class="nav-logo">Hafid F.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#about"   data-i18n="nav_about">About</a></li>
+      <li><a href="../index.html#skills"  data-i18n="nav_skills">Skills</a></li>
+      <li><a href="../index.html#work"    data-i18n="nav_work">Work</a></li>
+      <li><a href="index.html" class="active" data-i18n="nav_blog">Blog</a></li>
+      <li><a href="../index.html#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="ctrl-btn lang-btn active-lang" data-lang="en">EN</button>
+      <button class="ctrl-btn lang-btn" data-lang="id">ID</button>
+      <button id="darkToggle" aria-label="Toggle dark mode"></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════ ARTICLE ════ -->
+  <article id="post">
+
+    <!-- back link -->
+    <div class="post-back fade-in">
+      <a href="index.html" class="back-link">← <span data-i18n="label_blog">Blog</span></a>
+    </div>
+
+    <!-- header -->
+    <header class="post-header fade-in">
+      <div class="post-meta-top">
+        <span class="blog-tag">Dev</span>
+        <span class="post-date">April 2025</span>
+        <span class="post-readtime">5 min read</span>
+      </div>
+      <h1 class="post-title">
+        What I learned building<br/><em>AksaraLoka from scratch</em>
+      </h1>
+      <p class="post-lead">
+        Building a platform for Indonesian local scripts taught me more about product thinking, scope creep, and knowing when to ship than any lecture ever did.
+      </p>
+    </header>
+
+    <hr class="divider" style="margin: 2rem auto;"/>
+
+    <!-- body -->
+    <div class="post-body fade-in">
+
+      <p>
+        This is a template for your blog posts. Replace everything in <code>.post-body</code>
+        with your actual writing. The styles below handle paragraphs, headings,
+        code blocks, blockquotes, and lists — all pre-styled.
+      </p>
+
+      <h2>Why I started this project</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+      </p>
+
+      <blockquote>
+        The best way to learn is to build something you actually care about finishing.
+      </blockquote>
+
+      <h2>What I actually built</h2>
+      <p>
+        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+        Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+      </p>
+
+      <pre><code>// example code block
+function aksara(input) {
+  return input.split('').map(char => convert(char)).join('');
+}</code></pre>
+
+      <h2>What I'd do differently</h2>
+      <ul>
+        <li>Start with the data model, not the UI</li>
+        <li>Ship an ugly v1 sooner</li>
+        <li>Ask for feedback before building feature #3</li>
+      </ul>
+
+      <p>
+        And that's basically it. More posts coming when I stop procrastinating.
+      </p>
+
+    </div>
+
+    <!-- post footer -->
+    <div class="post-footer fade-in">
+      <hr class="divider" style="margin: 3rem auto 2rem;"/>
+      <div class="post-nav">
+        <a href="index.html" class="btn" data-i18n="label_blog">← All posts</a>
+        <a href="../index.html#contact" class="btn btn-fill" data-i18n="nav_contact">Contact</a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <span class="footer-text">© 2025 Hafid Fathurrohman</span>
+    <span class="footer-text" data-i18n="footer_right">Built with HTML, CSS &amp; instant noodles.</span>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Hafid Fathurrohman — Blog"/>
+  <title>Blog — Hafid Fathurrohman</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="blog.css"/>
+</head>
+<body>
+
+  <!-- ════ NAV ════ -->
+  <nav>
+    <a href="../index.html" class="nav-logo">Hafid F.</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="../index.html#about"   data-i18n="nav_about">About</a></li>
+      <li><a href="../index.html#skills"  data-i18n="nav_skills">Skills</a></li>
+      <li><a href="../index.html#work"    data-i18n="nav_work">Work</a></li>
+      <li><a href="index.html" class="active" data-i18n="nav_blog">Blog</a></li>
+      <li><a href="../index.html#contact" data-i18n="nav_contact">Contact</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button class="ctrl-btn lang-btn active-lang" data-lang="en">EN</button>
+      <button class="ctrl-btn lang-btn" data-lang="id">ID</button>
+      <button id="darkToggle" aria-label="Toggle dark mode"></button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════ HEADER ════ -->
+  <section id="blog-header">
+    <p class="hero-eyebrow" data-i18n="blog_eyebrow">Writing & Notes</p>
+    <h1 class="hero-name" style="font-size: clamp(2rem,5vw,3.4rem);">
+      <span data-i18n="blog_heading_a">Things I</span><br/>
+      <em data-i18n="blog_heading_b">wrote down.</em>
+    </h1>
+    <p class="hero-sub" data-i18n="blog_sub">
+      Notes on building, learning, and occasionally being very wrong about things.
+    </p>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ════ POST LIST ════ -->
+  <section id="posts">
+    <p class="section-label" data-i18n="label_blog">Blog</p>
+
+    <!-- post item template — duplicate for each real post -->
+    <ul class="blog-list">
+
+      <a class="blog-item blog-item--full" href="post.html">
+        <div class="blog-item-meta">
+          <span class="blog-tag" data-i18n="tag_dev">Dev</span>
+          <span class="blog-date">— <span data-i18n="blog_coming">Coming soon</span></span>
+        </div>
+        <span class="blog-title" data-i18n="blog1">What I learned building AksaraLoka from scratch</span>
+        <span class="blog-excerpt" data-i18n="blog1_exc">Building a platform for Indonesian local scripts taught me more about product thinking than any lecture ever did.</span>
+        <span class="blog-read" data-i18n="blog_read">Read →</span>
+      </a>
+
+      <a class="blog-item blog-item--full" href="post.html">
+        <div class="blog-item-meta">
+          <span class="blog-tag" data-i18n="tag_ops">DevOps</span>
+          <span class="blog-date">— <span data-i18n="blog_coming">Coming soon</span></span>
+        </div>
+        <span class="blog-title" data-i18n="blog2">Why I study DevOps as a freshman — and why you should too</span>
+        <span class="blog-excerpt" data-i18n="blog2_exc">Most people wait until they "need" DevOps. I think that's too late. Here's why I started early.</span>
+        <span class="blog-read" data-i18n="blog_read">Read →</span>
+      </a>
+
+      <a class="blog-item blog-item--full" href="post.html">
+        <div class="blog-item-meta">
+          <span class="blog-tag" data-i18n="tag_game">GameDev</span>
+          <span class="blog-date">— <span data-i18n="blog_coming">Coming soon</span></span>
+        </div>
+        <span class="blog-title" data-i18n="blog3">Game dev taught me to think in systems</span>
+        <span class="blog-excerpt" data-i18n="blog3_exc">Game loops, state machines, collision detection — turns out they're just software engineering with better marketing.</span>
+        <span class="blog-read" data-i18n="blog_read">Read →</span>
+      </a>
+
+      <a class="blog-item blog-item--full" href="post.html">
+        <div class="blog-item-meta">
+          <span class="blog-tag" data-i18n="tag_db">Database</span>
+          <span class="blog-date">— <span data-i18n="blog_coming">Coming soon</span></span>
+        </div>
+        <span class="blog-title" data-i18n="blog4">Database design mistakes I made and what fixed them</span>
+        <span class="blog-excerpt" data-i18n="blog4_exc">I denormalized everything, named columns whatever felt good, and skipped indexes. Here's what happened next.</span>
+        <span class="blog-read" data-i18n="blog_read">Read →</span>
+      </a>
+
+    </ul>
+
+    <p class="blog-note" data-i18n="blog_note">Writing in progress — check back soon.</p>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer>
+    <span class="footer-text">© 2025 Hafid Fathurrohman</span>
+    <span class="footer-text" data-i18n="footer_right">Built with HTML, CSS &amp; instant noodles.</span>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
