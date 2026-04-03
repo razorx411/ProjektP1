@@ -71,7 +71,7 @@ window.TRANSLATIONS = {
     contact_intro:  "Got a project, idea,\nor just want to say hello?",
     contact_github: "GitHub ↗",
     contact_li:     "LinkedIn ↗",
-    contact_tw:     "Twitter ↗",
+    contact_dc:     "Twitter ↗",
     contact_ig:     "Instagram ↗",
 
     /* kofi */
@@ -153,7 +153,7 @@ window.TRANSLATIONS = {
 
     akslok_desc: "Platform untuk aksara dan bahasa lokal Indonesia — menjadikan aksara daerah mudah diakses, dipelajari, dan dilestarikan di era digital.",
     chika_desc:  "Proyek asisten berbasis AI — eksplorasi antarmuka percakapan, prompt engineering, dan integrasi language model ke aplikasi nyata.",
-    sigmaboard_desc: "Task tracker gaya Kanban yang dibuat sebagai proyek semester. Banyak belajar tentang state management, drag-and-drop UX, dan session handling PHP.",
+    notebeans_desc: "NoteBeans adalah aplikasi daftar tugas (to-do list) yang sederhana namun elegan, dibangun menggunakan Java dan JavaFX. Proyek ini dirancang untuk membantu pengguna mengelola tugas harian secara efisien melalui antarmuka yang bersih dan responsif.",
     dbclinic_desc:   "Dashboard monitoring database sederhana untuk klinik lokal — query MySQL, jumlah record langsung, dan operasi CRUD dasar dengan UI yang rapi.",
     p_inquire: "Tanya →",
     p_view:    "Lihat →",
@@ -175,14 +175,14 @@ window.TRANSLATIONS = {
     contact_tw:     "Twitter ↗",
     contact_ig:     "Instagram ↗",
 
-    /* kofi */
-    kofi_title: "Traktir kopi dong? ☕",
-    kofi_sub:   "Gue mahasiswa bokek yang hidup dari mie instan dan kafein.\nKalau karya gue bermanfaat, secangkir kopi bikin server tetap nyala\n(dan gue tetap melek jam 2 pagi pas debugging).",
-    kofi_btn:   "Support via Ko-fi",
-    kofi_disc:  "100% opsional. Gak ada paksaan. Serius.",
+    /* matcha */
+    matcha_title: "Traktir matcha plz >_<",
+    matcha_sub:   "Gue mahasiswa bokek yang hidup dari mie instan dan kafein.\nKalau karya gue bermanfaat, secangkir kopi bikin server tetap nyala\n(dan gue tetap melek jam 2 pagi pas debugging).",
+    matcha_btn:   "Support via Ko-fi",
+    matcha_disc:  "100% opsional. Gak ada paksaan. Serius.",
 
     /* footer */
-    footer_right: "Dibuat dengan HTML, CSS & mie instan.",
+    footer_right: "Dibuat dengan HTML, CSS & Matcha >_<.",
 
     /* blog page */
     blog_eyebrow:   "Tulisan & Catatan",
@@ -200,8 +200,8 @@ window.TRANSLATIONS = {
     blog4_exc:      "Gue denormalize semua tabel, namain kolom sembarangan, dan skip index. Ini yang terjadi berikutnya.",
 
     /* kofi */
-    kofi_line1:     "a-.. ano.. e-ehem.. (〃▽〃)",
-    kofi_line2:     "kalau kamu lagi banyak duit.. b-bisa traktir kopi gak..? >_<",
-    kofi_btn_short: "☕ traktir kopi dong",
+    matcha_line1:     "a-.. ano.. e-ehem.. (〃▽〃)",
+    matcha_line2:     "kalau kamu lagi banyak duit.. b-bisa traktir matcha gak..?",
+    matcha_btn_short: "Beliin akuh matcha dong >_<",
   }
 };

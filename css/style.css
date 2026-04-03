@@ -542,7 +542,7 @@ hr.divider {
   50%      { transform: translateY(-3px); }
 }
 
-.kofi-inline-btn {
+.matcha-inline-btn {
   display: inline-block;
   font-family: var(--mono);
   font-size: 0.68rem;
@@ -556,7 +556,7 @@ hr.divider {
   transition: all var(--transition);
   margin-bottom: 0.8rem;
 }
-.kofi-inline-btn:hover { background: var(--fg); color: var(--bg); }
+.matcha-inline-btn:hover { background: var(--fg); color:greenyellow; }
 
 .speech-disclaimer {
   font-family: var(--mono);
