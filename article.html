@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Articles by Hafid Fathurrohman — thoughts on web dev, game dev, DevOps, and more."/>
+  <title>Articles — Hafid Fathurrohman</title>
+  <link rel="icon" type="image/png" href="assets/ic_main.png"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <!-- ════════════════════ MASTHEAD ════════════════════ -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="deco-shape">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 0 C50 27.6,27.6 50,0 50 C27.6 50,50 72.4,50 100 C50 72.4,72.4 50,100 50 C72.4 50,50 27.6,50 0Z"/>
+        </svg>
+      </div>
+      <h1 class="masthead-title">Portfolio</h1>
+      <div class="deco-shape">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 0 C50 27.6,27.6 50,0 50 C27.6 50,50 72.4,50 100 C50 72.4,72.4 50,100 50 C72.4 50,50 27.6,50 0Z"/>
+        </svg>
+      </div>
+    </div>
+
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" data-page="home">Home</a>
+        <a href="article.html" class="active" data-page="article">Article</a>
+        <a href="work.html" data-page="works">Works</a>
+      </div>
+
+      <div class="nav-controls">
+        <button class="ctrl-btn lang-btn active-lang" data-lang="en">EN</button>
+        <button class="ctrl-btn lang-btn" data-lang="id">ID</button>
+        <button id="darkToggle" aria-label="Toggle dark mode"></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ════════════════════ ARTICLES ════════════════════ -->
+  <main class="page-full">
+    <h2 class="section-heading" data-i18n="heading_articles">All Articles</h2>
+
+    <div class="article-list">
+
+      <!-- Article 1 -->
+      <a href="blog/post.html" class="article-list-item fade-in">
+        <div class="article-thumb" role="img" aria-label="AksaraLoka article thumbnail" style="display:flex;align-items:center;justify-content:center;font-family:var(--display);color:var(--muted);font-style:italic;">01</div>
+        <div class="article-item-content">
+          <h3 class="article-item-title" data-i18n="blog1">What I learned building AksaraLoka from scratch</h3>
+          <div class="article-item-meta">
+            <span>⏱ 6 min read</span>
+            <span>|</span>
+            <span>Coming soon</span>
+          </div>
+          <p class="article-item-excerpt" data-i18n="art1_excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <span class="article-item-readmore">Read More →</span>
+        </div>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="blog/index.html" class="article-list-item fade-in fade-in-delay-1">
+        <div class="article-thumb" role="img" aria-label="DevOps article thumbnail" style="display:flex;align-items:center;justify-content:center;font-family:var(--display);color:var(--muted);font-style:italic;">02</div>
+        <div class="article-item-content">
+          <h3 class="article-item-title" data-i18n="blog2">Why I study DevOps as a freshman — and why you should too</h3>
+          <div class="article-item-meta">
+            <span>⏱ 8 min read</span>
+            <span>|</span>
+            <span>Coming soon</span>
+          </div>
+          <p class="article-item-excerpt" data-i18n="art2_excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <span class="article-item-readmore">Read More →</span>
+        </div>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="blog/index.html" class="article-list-item fade-in fade-in-delay-2">
+        <div class="article-thumb" role="img" aria-label="Game dev article thumbnail" style="display:flex;align-items:center;justify-content:center;font-family:var(--display);color:var(--muted);font-style:italic;">03</div>
+        <div class="article-item-content">
+          <h3 class="article-item-title" data-i18n="blog3">Game dev taught me to think in systems</h3>
+          <div class="article-item-meta">
+            <span>⏱ 5 min read</span>
+            <span>|</span>
+            <span>Coming soon</span>
+          </div>
+          <p class="article-item-excerpt" data-i18n="art3_excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <span class="article-item-readmore">Read More →</span>
+        </div>
+      </a>
+
+      <!-- Article 4 -->
+      <a href="blog/index.html" class="article-list-item fade-in fade-in-delay-3">
+        <div class="article-thumb" role="img" aria-label="Database article thumbnail" style="display:flex;align-items:center;justify-content:center;font-family:var(--display);color:var(--muted);font-style:italic;">04</div>
+        <div class="article-item-content">
+          <h3 class="article-item-title" data-i18n="blog4">Database design mistakes I made and what fixed them</h3>
+          <div class="article-item-meta">
+            <span>⏱ 7 min read</span>
+            <span>|</span>
+            <span>Coming soon</span>
+          </div>
+          <p class="article-item-excerpt" data-i18n="art4_excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <span class="article-item-readmore">Read More →</span>
+        </div>
+      </a>
+
+    </div>
+  </main>
+
+  <!-- ════════════════════ SUPPORT / KO-FI ════════════════════ -->
+  <div id="support">
+    <div class="anime-scene fade-in">
+      <!-- anime gif -->
+      <div class="anime-gif-wrap">
+        <img src="anime-blush.gif" alt="anime blush" />
+      </div>  
+      <!-- speech bubble -->
+      <div class="anime-speech">
+        <p class="speech-line-1" data-i18n="support_line1">a-.. ano.. e-ehem.. (〃▽〃)</p>
+        <p class="speech-line-2" data-i18n="support_line2">if you have a lot of money.. c-can you treat me a coffee..? &gt;_&lt;</p>
+        <a href="https://ko-fi.com/hafidfathurrohman" target="_blank" class="matcha-inline-btn" data-i18n="support_btn">buy me a matcha</a>
+        <p class="speech-disclaimer" data-i18n="support_disc">100% optional. No pressure. Seriously.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════ FOOTER ════════════════════ -->
+  <footer>
+    <span class="footer-text">© 2026 Hafid Fathurrohman</span>
+    <span class="footer-text" data-i18n="footer_right">Built with HTML, CSS &amp; Matcha.</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

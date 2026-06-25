@@ -68,9 +68,15 @@
     const btn = document.getElementById("hamburger");
     const menu = document.getElementById("navLinks");
     if (!btn || !menu) return;
-    btn.addEventListener("click", () => menu.classList.toggle("open"));
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      btn.classList.toggle("open");
+    });
     menu.querySelectorAll("a").forEach(a => {
-      a.addEventListener("click", () => menu.classList.remove("open"));
+      a.addEventListener("click", () => {
+        menu.classList.remove("open");
+        btn.classList.remove("open");
+      });
     });
   }
 

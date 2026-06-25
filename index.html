@@ -3,296 +3,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Hafid Fathurrohman — Information Systems student, developer, builder."/>
-  <title>Hafid Fathurrohman</title>
+  <meta name="description" content="Hafid Fathurrohman — Information Systems student, developer, builder. Portfolio home."/>
+  <title>Hafid Fathurrohman — Portfolio</title>
   <link rel="icon" type="image/png" href="assets/ic_main.png"/>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-  <!-- ════════════════════ NAV ════════════════════ -->
-  <nav>
-    <a href="#hero" class="nav-logo">razorx411</a>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about"   data-i18n="nav_about">About</a></li>
-      <li><a href="#skills"  data-i18n="nav_skills">Skills</a></li>
-      <li><a href="#work"    data-i18n="nav_work">Work</a></li>
-      <li><a href="#blog"    data-i18n="nav_blog">Blog</a></li>
-      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-    </ul>
-
-    <div class="nav-controls">
-      <!-- Language toggle -->
-      <button class="ctrl-btn lang-btn active-lang" data-lang="en">EN</button>
-      <button class="ctrl-btn lang-btn" data-lang="id">ID</button>
-      <!-- Dark mode toggle -->
-      <button id="darkToggle" aria-label="Toggle dark mode"></button>
-      <!-- Hamburger -->
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-
-  <!-- ════════════════════ HERO ════════════════════ -->
-  <section id="hero">
-    <p class="hero-eyebrow" data-i18n="hero_eyebrow">Available for internships &amp; collaborations</p>
-    <h1 class="hero-name">
-      <span data-i18n="hero_h1a">Hafid</span><br/>
-      <em data-i18n="hero_h1b">Fathurrohman</em>
-    </h1>
-    <h3>a.k.a razorx411</h3>
-    <p class="hero-sub" data-i18n="hero_sub">
-      Information Systems student at UPN Veteran Jawa Timur — building things across the stack. Web, games, infra, data. Still learning, always shipping.
-    </p>
-    <div class="hero-cta">
-      <a href="#work"    class="btn btn-fill" data-i18n="hero_cta1">See my work</a>
-      <a href="#contact" class="btn"          data-i18n="hero_cta2">Get in touch</a>
-    </div>
-    <p class="hero-scroll" data-i18n="hero_scroll">↓ scroll</p>
-  </section>
-
-  <hr class="divider"/>
-
-
-  <!-- ════════════════════ ABOUT ════════════════════ -->
-  <section id="about">
-    <p class="section-label" data-i18n="label_about">About</p>
-    <div class="about-grid fade-in">
-
-      <div class="about-text">
-        <p data-i18n="about_p1">I'm Hafid, an undergraduate Information Systems student based in East Java, Indonesia. I got into tech because I wanted to understand how everything connects — from the database to the browser, from a server config to a game loop.</p>
-        <p data-i18n="about_p2">I approach every domain as a student first. I don't believe in being locked into one discipline, especially early on. The generalist mindset helps me connect dots that specialists sometimes miss.</p>
-        <p data-i18n="about_p3">Currently building <strong>AksaraLoka</strong> and <strong>ChikaAI</strong> — two projects that are teaching me more than any course has.</p>
+  <!-- ════════════════════ MASTHEAD ════════════════════ -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <!-- Decorative left -->
+      <div class="deco-shape">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 0 C50 27.6,27.6 50,0 50 C27.6 50,50 72.4,50 100 C50 72.4,72.4 50,100 50 C72.4 50,50 27.6,50 0Z"/>
+        </svg>
       </div>
 
-      <div class="about-meta">
-        <div class="meta-item"><div class="meta-label" data-i18n="meta_status">Status</div><div class="meta-value" data-i18n="meta_status_v">Undergraduate, active</div></div>
-        <div class="meta-item"><div class="meta-label" data-i18n="meta_uni">University</div><div class="meta-value" data-i18n="meta_uni_v">UPN Veteran Jawa Timur</div></div>
-        <div class="meta-item"><div class="meta-label" data-i18n="meta_major">Major</div><div class="meta-value" data-i18n="meta_major_v">Information Systems</div></div>
-        <div class="meta-item"><div class="meta-label" data-i18n="meta_loc">Location</div><div class="meta-value" data-i18n="meta_loc_v">Surabaya, East Java</div></div>
-        <div class="meta-item"><div class="meta-label" data-i18n="meta_open">Open to</div><div class="meta-value" data-i18n="meta_open_v">Internships, Collabs</div></div>
-      </div>
+      <h1 class="masthead-title">Portfolio</h1>
 
-    </div>
-  </section>
-
-  <hr class="divider"/>
-
-
-  <!-- ════════════════════ SKILLS ════════════════════ -->
-  <section id="skills">
-    <p class="section-label" data-i18n="label_skills">Skills</p>
-    <div class="skills-grid fade-in">
-
-      <div class="skill-block">
-        <p class="skill-title" data-i18n="skill_web">Web Development</p>
-        <div class="skill-tags">
-          <span class="tag">HTML</span><span class="tag">CSS</span>
-          <span class="tag">JavaScript</span><span class="tag">PHP</span>
-          <span class="tag">MySQL</span>
-          <!-- <span class="tag">REST APIs</span> -->
-        </div>
-      </div>
-
-      <div class="skill-block">
-        <p class="skill-title" data-i18n="skill_game">Game Development</p>
-        <div class="skill-tags">
-          <span class="tag">Unity</span>
-          <!-- <span class="tag">C#</span> -->
-          <span class="tag">Game Design</span>
-          <span class="tag">2D</span>
-        </div>
-      </div>
-
-      <div class="skill-block">
-        <p class="skill-title" data-i18n="skill_devops">DevOps &amp; Infra</p>
-        <div class="skill-tags">
-          <span class="tag">Linux</span><span class="tag">Git</span>
-          <!-- <span class="tag">Docker</span>
-          <span class="tag">CI/CD</span>
-          <span class="tag">Bash</span> -->
-        </div>
-      </div>
-
-      <div class="skill-block">
-        <p class="skill-title" data-i18n="skill_db">Database Admin</p>
-        <div class="skill-tags">
-          <span class="tag">MySQL</span>
-          <!-- <span class="tag">PostgreSQL</span> -->
-          <!-- <span class="tag">Query Opt.</span> -->
-          <span class="tag">Schema Design</span>
-        </div>
-      </div>
-
-      <div class="skill-block">
-        <p class="skill-title" data-i18n="skill_se">Software Engineering</p>
-        <div class="skill-tags">
-          <span class="tag">OOP</span><span class="tag">Java</span>
-          <span class="tag">Data Structures</span><span class="tag">Algorithms</span>
-        </div>
-      </div>
-
-      <div class="skill-block">
-        <p class="skill-title" data-i18n="skill_learning">Currently Learning</p>
-        <div class="skill-tags">
-          <span class="tag">React</span><span class="tag">Tailwindcss</span><span class="tag">Node.js</span>
-          <span class="tag">Python</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="divider"/>
-
-
-  <!-- ════════════════════ WORK ════════════════════ -->
-  <section id="work">
-    <p class="section-label" data-i18n="label_work">Work</p>
-
-    <!-- ongoing: AksaraLoka -->
-    <div class="project fade-in">
-      <div>
-        <p class="project-number">01</p>
-        <h3 class="project-title">AksaraLoka</h3>
-        <p class="project-desc" data-i18n="akslok_desc">A platform dedicated to Indonesian local scripts and languages — making regional aksara accessible, learnable, and preservable for the digital generation.</p>
-        <div class="project-footer">
-          <p class="project-status"><span class="status-dot"></span><span data-i18n="proj_ongoing">Ongoing</span></p>
-          <span class="project-year">2026 –</span>
-        </div>
-      </div>
-      <div>
-        <a href="#contact" class="btn" data-i18n="p_inquire">Inquire →</a>
+      <!-- Decorative right -->
+      <div class="deco-shape">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 0 C50 27.6,27.6 50,0 50 C27.6 50,50 72.4,50 100 C50 72.4,72.4 50,100 50 C72.4 50,50 27.6,50 0Z"/>
+        </svg>
       </div>
     </div>
 
-    <!-- ongoing: ChikaAI -->
-    <div class="project fade-in">
-      <div>
-        <p class="project-number">02</p>
-        <h3 class="project-title">ChikaAI</h3>
-        <p class="project-desc" data-i18n="chika_desc">An AI-powered assistant project — exploring conversational interfaces, prompt engineering, and integrating language models into practical, user-facing applications.</p>
-        <div class="project-footer">
-          <p class="project-status"><span class="status-dot"></span><span data-i18n="proj_ongoing">Ongoing</span></p>
-          <span class="project-year">2024 –</span>
+    <!-- Navigation -->
+    <nav class="main-nav" id="mainNav">
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active" data-page="home">Home</a>
+        <a href="article.html" data-page="article">Article</a>
+        <a href="work.html" data-page="works">Works</a>
+      </div>
+
+      <div class="nav-controls">
+        <button class="ctrl-btn lang-btn active-lang" data-lang="en">EN</button>
+        <button class="ctrl-btn lang-btn" data-lang="id">ID</button>
+        <button id="darkToggle" aria-label="Toggle dark mode"></button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <!-- ════════════════════ PAGE BODY — 3 COLUMNS ════════════════════ -->
+  <main class="page-body">
+
+    <!-- ── LEFT SIDEBAR: Newest Articles ── -->
+    <aside class="sidebar-left fade-in">
+      <h2 class="sidebar-title" data-i18n="sidebar_newest">Newest Article</h2>
+
+      <div class="article-preview">
+        <h3 class="article-preview-title" data-i18n="ap1_title">What I learned building AksaraLoka from scratch</h3>
+        <p class="article-preview-text" data-i18n="ap1_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a href="article.html" class="read-more-link">Read More <span class="arrow">↗</span></a>
+      </div>
+
+      <div class="article-preview">
+        <h3 class="article-preview-title" data-i18n="ap2_title">Why I study DevOps as a freshman</h3>
+        <p class="article-preview-text" data-i18n="ap2_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a href="article.html" class="read-more-link">Read More <span class="arrow">↗</span></a>
+      </div>
+
+      <div class="article-preview">
+        <h3 class="article-preview-title" data-i18n="ap3_title">Game dev taught me to think in systems</h3>
+        <p class="article-preview-text" data-i18n="ap3_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <a href="article.html" class="read-more-link">Read More <span class="arrow">↗</span></a>
+      </div>
+    </aside>
+
+
+    <!-- ── CENTER: Featured Works ── -->
+    <section class="center-content">
+      <h2 class="section-heading" data-i18n="heading_featured">Featured Works</h2>
+
+      <!-- Work 1: AksaraLoka -->
+      <article class="work-card fade-in">
+        <h3 class="work-card-title">AksaraLoka</h3>
+        <div class="work-card-meta">
+          <span class="meta-icon">✓ Finished</span>
+          <span>|</span>
+          <span>2026</span>
+        </div>
+        <div class="work-card-image" role="img" aria-label="AksaraLoka project screenshot" style="display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:2rem;color:var(--muted);font-style:italic;">AksaraLoka</div>
+        <p class="work-card-desc" data-i18n="akslok_desc">A platform dedicated to Indonesian local scripts and languages — making regional aksara accessible, learnable, and preservable for the digital generation.</p>
+        <a href="work.html" class="btn-retro btn-retro-fill">Read More</a>
+      </article>
+
+      <!-- Work 2: ChikaAI -->
+      <article class="work-card fade-in">
+        <h3 class="work-card-title">ChikaAI</h3>
+        <div class="work-card-meta">
+          <span class="meta-icon">⏱ Ongoing</span>
+          <span>|</span>
+          <span>2024 –</span>
+        </div>
+        <div class="work-card-image" role="img" aria-label="ChikaAI project screenshot" style="display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:2rem;color:var(--muted);font-style:italic;">ChikaAI</div>
+        <p class="work-card-desc" data-i18n="chika_desc">An AI-powered assistant project — exploring conversational interfaces, prompt engineering, and integrating language models into practical, user-facing applications.</p>
+        <a href="work.html" class="btn-retro btn-retro-fill">Read More</a>
+      </article>
+
+      <!-- Work 3: NoteBeans -->
+      <article class="work-card fade-in">
+        <h3 class="work-card-title">NoteBeans</h3>
+        <div class="work-card-meta">
+          <span class="meta-icon">✓ Finished</span>
+          <span>|</span>
+          <span>2024</span>
+        </div>
+        <div class="work-card-image" role="img" aria-label="NoteBeans project screenshot" style="display:flex;align-items:center;justify-content:center;font-family:var(--display);font-size:2rem;color:var(--muted);font-style:italic;">NoteBeans</div>
+        <p class="work-card-desc" data-i18n="notebeans_desc">NoteBeans is a simple yet elegant to-do list application built using Java and JavaFX. This project is designed to help users manage daily tasks efficiently through a clean and responsive interface.</p>
+        <a href="https://github.com/razorx411/NoteBeans" class="btn-retro btn-retro-fill">Read More</a>
+      </article>
+    </section>
+
+
+    <!-- ── RIGHT SIDEBAR: About Me ── -->
+    <aside class="sidebar-right fade-in fade-in-delay-2">
+
+      <!-- About card -->
+      <div class="about-card">
+        <h2 class="about-card-title" data-i18n="sidebar_about">About Me</h2>
+
+        <div class="profile-section">
+          <div class="profile-photo"><img src="assets/ic_me.jpg" alt="HF"></div>
+          <div>
+            <p class="profile-name">Hafid Fathurrohman</p>
+          </div>
+        </div>
+
+        <p class="about-bio" data-i18n="about_bio_short">Information Systems student at UPN Veteran Jawa Timur — building things across the stack. Web, games, infra, data. Still learning, always shipping.</p>
+
+        <div class="social-links">
+          <a href="www.linkedin.com/in/hafid-fathurrohman-99455b325" target="_blank" class="social-link-retro">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            Hafid Fathurrohman
+          </a>
+          <a href="https://github.com/razorx411" target="_blank" class="social-link-retro">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            razorx411
+          </a>
         </div>
       </div>
-      <div>
-        <a href="#contact" class="btn" data-i18n="p_inquire">Inquire →</a>
-      </div>
-    </div>
 
-    <!-- past: NoteBeans -->
-    <div class="project fade-in">
-      <div>
-        <p class="project-number">03</p>
-        <h3 class="project-title">NoteBeans</h3>
-        <p class="project-desc" data-i18n="notebeans_desc">NoteBeans is a simple yet elegant to-do list application built using Java and JavaFX. This project is designed to help users manage daily tasks efficiently through a clean and responsive interface.</p>
-        <div class="project-footer">
-          <p class="project-status"><span class="status-dot past"></span><span data-i18n="proj_finished">Finished</span></p>
-          <span class="project-year">2024</span>
+      <!-- Stats card -->
+      <div class="stats-card">
+        <div class="stat-row">
+          <span class="stat-label">Works</span>
+          <span class="stat-value">3</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Articles</span>
+          <span class="stat-value">4</span>
         </div>
       </div>
-      <div>
-        <a href="https://github.com/razorx411/NoteBeans" class="btn" data-i18n="p_view">View →</a>
-      </div>
-    </div>
+    </aside>
 
-    <!-- past: DB Clinic -->
-    <!-- <div class="project fade-in">
-      <div>
-        <p class="project-number">04</p>
-        <h3 class="project-title">DB Clinic Dashboard</h3>
-        <p class="project-desc" data-i18n="dbclinic_desc">A simple database monitoring dashboard for a local clinic — MySQL queries, live record counts, and basic CRUD operations wrapped in a clean UI.</p>
-        <div class="project-footer">
-          <p class="project-status"><span class="status-dot past"></span><span data-i18n="proj_finished">Finished</span></p>
-          <span class="project-year">2023</span>
-        </div>
-      </div>
-      <div>
-        <a href="#" class="btn" data-i18n="p_view">View →</a>
-      </div>
-    </div>
-
-  </section> -->
-
-  <hr class="divider"/>
-
-
-  <!-- ════════════════════ BLOG ════════════════════ -->
-  <section id="blog">
-    <p class="section-label" data-i18n="label_blog">Blog</p>
-    <ul class="blog-list fade-in">
-      <a class="blog-item" href="blog/post.html">
-        <span class="blog-title" data-i18n="blog1">What I learned building AksaraLoka from scratch</span>
-        <span class="blog-meta" data-i18n="blog_coming">Coming soon</span>
-      </a>
-      <a class="blog-item" href="blog/index.html">
-        <span class="blog-title" data-i18n="blog2">Why I study DevOps as a freshman — and why you should too</span>
-        <span class="blog-meta" data-i18n="blog_coming">Coming soon</span>
-      </a>
-      <a class="blog-item" href="blog/index.html">
-        <span class="blog-title" data-i18n="blog3">Game dev taught me to think in systems</span>
-        <span class="blog-meta" data-i18n="blog_coming">Coming soon</span>
-      </a>
-      <a class="blog-item" href="blog/index.html">
-        <span class="blog-title" data-i18n="blog4">Database design mistakes I made and what fixed them</span>
-        <span class="blog-meta" data-i18n="blog_coming">Coming soon</span>
-      </a>
-    </ul>
-    <p class="blog-note" data-i18n="blog_note">Writing in progress — check back soon.</p>
-  </section>
-
-  <hr class="divider"/>
-
-
-  <!-- ════════════════════ CONTACT ════════════════════ -->
-  <section id="contact">
-    <p class="section-label" data-i18n="label_contact">Contact</p>
-    <p class="contact-intro fade-in" data-i18n="contact_intro" data-i18n-html>
-      Got a project, idea,<br/>or just want to <em>say hello?</em>
-    </p>
-    <div class="contact-row fade-in">
-      <a href="mailto:hafid@example.com" class="btn btn-fill">hafid1602@gmail.com</a>
-    </div>
-    <div class="contact-socials fade-in">
-      <a href="https://github.com/razorx411"    target="_blank" class="social-link" data-i18n="contact_github">GitHub ↗</a>
-      <a href="www.linkedin.com/in/hafid-fathurrohman-99455b325"  target="_blank" class="social-link" data-i18n="contact_li">LinkedIn ↗</a>
-      <a href="https://discord.com/users/ezboy4884"   target="_blank" class="social-link" data-i18n="contact_dc">Discord ↗</a>
-      <a href="https://www.instagram.com/411off/" target="_blank" class="social-link" data-i18n="contact_ig">Instagram ↗</a>
-    </div>
-  </section>
-
+  </main>
 
   <!-- ════════════════════ SUPPORT / KO-FI ════════════════════ -->
   <div id="support">
     <div class="anime-scene fade-in">
-
+      <!-- anime gif -->
+      <div class="anime-gif-wrap">
+        <img src="anime-blush.gif" alt="anime blush" />
+      </div>  
       <!-- speech bubble -->
       <div class="anime-speech">
-        <p class="speech-line-1" data-i18n="matcha_line1">a-.. ano.. e-ehem..&nbsp;(〃▽〃)</p>
-        <p class="speech-line-2" data-i18n="matcha_line2">if you have a lot of money.. c-can you treat me a matcha..? &gt;_&lt;</p>
-        <a href="https://ko-fi.com/hafidfathurrohman" target="_blank" class="matcha-inline-btn" data-i18n="mathca_btn_short">buy me a matcha</a>
-        <p class="speech-disclaimer" data-i18n="matcha_disc">100% optional. No pressure. Seriously.</p>
+        <p class="speech-line-1" data-i18n="support_line1">a-.. ano.. e-ehem.. (〃▽〃)</p>
+        <p class="speech-line-2" data-i18n="support_line2">if you have a lot of money.. c-can you treat me a coffee..? &gt;_&lt;</p>
+        <a href="https://ko-fi.com/hafidfathurrohman" target="_blank" class="matcha-inline-btn" data-i18n="support_btn">buy me a matcha</a>
+        <p class="speech-disclaimer" data-i18n="support_disc">100% optional. No pressure. Seriously.</p>
       </div>
-
-      <!-- anime gif -->
-    <div class="anime-gif-wrap">
-      <img src="anime-blush.gif" alt="anime blush" />
-    </div>  
-
     </div>
   </div>
-
 
   <!-- ════════════════════ FOOTER ════════════════════ -->
   <footer>

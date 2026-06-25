@@ -98,10 +98,11 @@ window.TRANSLATIONS = {
     blog3_exc:      "Game loops, state machines, collision detection — turns out they're just software engineering with better marketing.",
     blog4_exc:      "I denormalized everything, named columns whatever felt good, and skipped indexes. Here's what happened next.",
 
-    /* kofi */
-    kofi_line1:     "a-.. ano.. e-ehem.. (〃▽〃)",
-    kofi_line2:     "if you have a lot of money.. c-can you treat me a coffee..? >_<",
-    kofi_btn_short: "☕ buy me a coffee",
+    /* support */
+    support_line1: "a-.. ano.. e-ehem.. (〃▽〃)",
+    support_line2: "if you have a lot of money.. c-can you treat me a coffee..? >_<",
+    support_btn:   "☕ buy me a coffee",
+    support_disc:  "100% optional. No pressure. Seriously.",
   },
 
   id: {
@@ -199,9 +200,10 @@ window.TRANSLATIONS = {
     blog3_exc:      "Game loop, state machine, collision detection — ternyata itu cuma software engineering dengan marketing yang lebih keren.",
     blog4_exc:      "Gue denormalize semua tabel, namain kolom sembarangan, dan skip index. Ini yang terjadi berikutnya.",
 
-    /* kofi */
-    matcha_line1:     "a-.. ano.. e-ehem.. (〃▽〃)",
-    matcha_line2:     "kalau kamu lagi banyak duit.. b-bisa traktir matcha gak..?",
-    matcha_btn_short: "Beliin akuh matcha dong >_<",
+    /* support */
+    support_line1: "a-.. ano.. e-ehem.. (〃▽〃)",
+    support_line2: "kalau kamu lagi banyak duit.. b-bisa traktir matcha gak..?",
+    support_btn:   "Beliin akuh matcha dong >_<",
+    support_disc:  "100% optional. Gak ada paksaan. Serius.",
   }
 };
